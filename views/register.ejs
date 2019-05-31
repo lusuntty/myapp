@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #small-dialog,
+        #small-dialog2,
+        #small-dialog1 {
+            background: #ffffff;
+            text-align: left;
+            max-width: 400px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .login-form h3 {
+            font-size: 2em;
+            color: #333;
+            float: left;
+            margin-bottom: 1.5em;
+            line-height: 0.7em;
+            letter-spacing: 0px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"],
+        .login-form input[type="email"] {
+            outline: none;
+            font-size: .9em;
+            letter-spacing: 1px;
+            color: #666;
+            padding: 1em 1em;
+            margin: 0;
+            width: 92%;
+            margin-bottom: 1em;
+            border: none;
+            border: 1px solid rgb(101, 101, 101);
+            -webkit-appearance: none;
+            display: block;
+            background: #fff;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .login-check {
+            margin-bottom: 1em;
+        }
+
+        label {
+            margin: 0;
+            letter-spacing: 1px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .login-form input[type="submit"] {
+            font-size: 1em;
+            color: #ffffff;
+            background: #db3552;
+            border: 1px solid #db3552;
+            outline: none;
+            cursor: pointer;
+            padding: .8em 1em;
+            letter-spacing: 1px;
+            -webkit-appearance: none;
+            width: 100%;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -o-border-radius: 0px;
+            border-radius: 0px;
+            transition: 0.5s all;
+            -webkit-transition: 0.5s all;
+            -moz-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            -ms-transition: 0.5s all;
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form class="form-horizontal" method="POST" action="http://localhost:4000/register">
+        <!-- register form popup-->
+        <div class="pop-up">
+            <div id="small-dialog2" class="mfp-hide book-form">
+
+                <div class="login-form login-form-left">
+                    <div class="agile-row">
+                        <h3>Register form</h3>
+                        <div class="login-agileits-top">
+                            <form action="#" method="post">
+                                <input type="text" class="name" name="username" Placeholder="Full Name" required="" />
+                                <input type="email" class="email" name="email" Placeholder="Email" required="" />
+                                <input type="text" class="phone" name="phone" Placeholder="Phone Number" required="" />
+                                <input type="password" class="password" name="password" Placeholder="Password"
+                                    required="" />
+                                <div class="login-check">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> I
+                                        Accept to the <a href="#">Terms &amp; Conditions</a></label>
+                                </div>
+                                <input type="submit" value="Register">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- //register form popup-->
+    </form>
+
+
+
+    <%- include ./common/footer.ejs  %>
